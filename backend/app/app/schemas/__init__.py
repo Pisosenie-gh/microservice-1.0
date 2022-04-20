@@ -20,6 +20,6 @@ from .position import Position, PositionCreate, PositionUpdate
 from .staff_unit_role import StaffUnitRole, StaffUnitRoleCreate, StaffUnitRoleUpdate
 from .staff_unit import StaffUnit, StaffUnitCreate, StaffUnitUpdate
 from .ldap_login import LdapLogin, LdapLoginCreate, LdapLoginUpdate
-from .internal_employee import InternalEmployee, InternalEmployeePatch, InternalEmployeeCreate, InternalEmployeeUpdate
+from .internal_employee import InternalEmployee, InternalEmployeePatch, InternalEmployeeCreate, InternalEmployeeUpdate, InternalEmployeeAddLdap
 from .appointment import Appointment, AppointmentUpdate, AppointmentPatch, AppointmentCreate
 from .replacement import Replacement, ReplacementUpdate, ReplacementPatch, ReplacementCreate

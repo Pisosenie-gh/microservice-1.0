@@ -49,7 +49,6 @@ class InternalEmployeeCreate(InternalEmployeeBase):
     maritalStatusId: int
     militaryServiceAttitudeId: int
     nationalityGenderId: int
-    ldapLoginId: int
 
 
 
@@ -112,7 +111,10 @@ class InternalEmployeePatch(BaseModel):
     isReserveMember: bool
     isInsider: bool
     isActive: int
-    
+
+class InternalEmployeeAddLdap(BaseModel):
+    ldapLoginId: int
+
 # Properties to return to client
 class InternalEmployee(InternalEmployeeBase):
     id: int
@@ -132,11 +134,16 @@ class InternalEmployee(InternalEmployeeBase):
     gender: str
     isActive: int
     status: EmployeeStatus
-    ldapLogin: LdapLogin
+    ldapLogin: Optional[LdapLogin] 
     grade: Grade
     marital_status: MaritalStatus
     militaryServiceAttitude: MilitaryServiceAttitude
     nationalityGender: NationalityGender
+
+
+    class Config:
+        orm_mode = True
+
 
 
     class Config:

@@ -22,7 +22,7 @@ def read_ldap_login(
     <br>Поддерживается ограничение результатов выдачи при помощи параметров <b>skip</b> и <b>limit</b>
     """
 
-    ldap_login = crud.ldap_login.get_multi(db, skip=skip, limit=limit)
+    ldap_login = crud.ldap_login.get_multi(db, skip=skip, limit=limit, id=id)
 
 
     return ldap_login
@@ -39,7 +39,15 @@ def create_ldap_login(
     """
     Добавление записи назначения
     """
-    ldap_login = crud.ldap_login.create(db=db, obj_in=ldap_login_in)
+    ldap_login = crud.ldap_login.create(db=db, obj_in=ldap_login_in, id=id)
+
+    employee = crud.internal_employee.get(db=db, id=id)
+    if not employee:
+        raise HTTPException(status_code=404, detail="employee {id} not found ".format(id=id))
+
+    employee = crud.ldap_login.patch_for_employee(db=db, db_obj=employee, obj_in={'ldapLoginId': ldap_login.id})
+
+
     return ldap_login
 
 
