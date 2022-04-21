@@ -17,6 +17,6 @@ class Nationality(Base):
     nameKz = Column(String)
     isActive = Column(Integer, default=1)
 
-    nationalitySAPId = Column(Integer, ForeignKey('nationality-sap.id'))
+    nationalitySAPId = Column(Integer, ForeignKey('nationality_sap.id'))
     nationalitySAP = relationship("NationalitySap", backref="init", viewonly=True)
 

@@ -20,9 +20,9 @@ class Replacement(Base):
     startDate = Column(Date)
     endDate = Column(Date)
     isActive = Column(Integer, default=1)
-    typeId = Column(Integer, ForeignKey('replacement-type.id'))
-    replacedId = Column(Integer, ForeignKey('internal-employee.id'), nullable=True)
-    replacerId = Column(Integer, ForeignKey('internal-employee.id'), nullable=True)
+    typeId = Column(Integer, ForeignKey('replacement_type.id'))
+    replacedId = Column(Integer, ForeignKey('internal_employee.id'), nullable=True)
+    replacerId = Column(Integer, ForeignKey('internal_employee.id'), nullable=True)
     
 
 

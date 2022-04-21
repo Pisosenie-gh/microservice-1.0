@@ -8,7 +8,7 @@ from app.db.base_class import Base
 
 
 class LdapLogin(Base):
-    __tablename__ = 'ldap-login'
+    __tablename__ = 'ldap_login'
 
     id = Column(Integer, primary_key=True, index=True)
     login = Column(String)

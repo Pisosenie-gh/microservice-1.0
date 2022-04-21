@@ -10,7 +10,7 @@ from app.db.base_class import Base
 
 
 class ReplacementType(Base):
-    __tablename__ = 'replacement-type'
+    __tablename__ = 'replacement_type'
 
     id = Column(Integer, primary_key=True, index=True)
     nameRu = Column(String)

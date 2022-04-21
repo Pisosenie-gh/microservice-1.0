@@ -8,7 +8,7 @@ from app.db.base_class import Base
 
 
 class MilitaryServiceAttitude(Base):
-    __tablename__ = 'military-service-attitude'
+    __tablename__ = 'military_service_attitude'
 
     id = Column(Integer, primary_key=True, index=True)
     nameRu = Column(String)

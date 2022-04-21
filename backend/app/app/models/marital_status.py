@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 
 class MaritalStatus(Base):
-    __tablename__ = 'marital-status'
+    __tablename__ = 'marital_status'
 
     id = Column(Integer, primary_key=True, index=True)
     nameRu = Column(String)

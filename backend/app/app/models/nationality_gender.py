@@ -14,7 +14,7 @@ if TYPE_CHECKING:
 
 
 class NationalityGender(Base):
-    __tablename__ = 'nationality-gender'
+    __tablename__ = 'nationality_gender'
 
     id = Column(Integer, primary_key=True, index=True)
     nameRu = Column(String)

@@ -14,7 +14,7 @@ if TYPE_CHECKING:
 
 
 class StaffUnit(Base):
-    __tablename__ = 'staff-unit'
+    __tablename__ = 'staff_unit'
 
     id = Column(Integer, primary_key=True, index=True)
     organizationUnitId = Column(Integer)
@@ -22,8 +22,8 @@ class StaffUnit(Base):
     isActive = Column(Integer, default=1)
 
     positionId = Column(Integer, ForeignKey('position.id'))
-    typeId = Column(Integer, ForeignKey('staff-unit-type.id'))
-    staffCategoryId = Column(Integer, ForeignKey('staff-category.id'))
+    typeId = Column(Integer, ForeignKey('staff_unit_type.id'))
+    staffCategoryId = Column(Integer, ForeignKey('staff_category.id'))
 
     position = relationship("Position", backref="position", viewonly=True)
     type = relationship("StaffUnitType", backref="type", viewonly=True)

@@ -22,8 +22,8 @@ class Appointment(Base):
     isTemporary = Column(Boolean)
     isActive = Column(Integer, default=1)
 
-    employeeId = Column(Integer, ForeignKey('internal-employee.id'), nullable=True)
-    staffUnitId = Column(Integer, ForeignKey('staff-unit.id'), nullable=True)
+    employeeId = Column(Integer, ForeignKey('internal_employee.id'), nullable=True)
+    staffUnitId = Column(Integer, ForeignKey('staff_unit.id'), nullable=True)
 
   
     employee = relationship("InternalEmployee", backref="employee")
