@@ -1,0 +1,30 @@
+2022-05-13 08:13:43,914:app.api.api_v1.endpoints.internal_employee:WARNING:url=http://localhost/api/v1/internal-employee/, (psycopg2.errors.ForeignKeyViolation) insert or update on table "internal_employee" violates foreign key constraint "internal_employee_nationalityGenderId_fkey"
+DETAIL:  Key (nationalityGenderId)=(312321412) is not present in table "nationality_gender".
+
+[SQL: INSERT INTO internal_employee ("individualId", "legalOrganizationlId", "fullnameDeclinationId", "financialAccountId", iin, "personnelNumber", "lastName", "firstName", "middleName", "birthDate", "workStartDate", "isReserveMember", "isInsider", "isActive", gender, "statusId", "gradeId", "maritalStatusId", "militaryServiceAttitudeId", "nationalityGenderId", "ldapLoginId") VALUES (%(individualId)s, %(legalOrganizationlId)s, %(fullnameDeclinationId)s, %(financialAccountId)s, %(iin)s, %(personnelNumber)s, %(lastName)s, %(firstName)s, %(middleName)s, %(birthDate)s, %(workStartDate)s, %(isReserveMember)s, %(isInsider)s, %(isActive)s, %(gender)s, %(statusId)s, %(gradeId)s, %(maritalStatusId)s, %(militaryServiceAttitudeId)s, %(nationalityGenderId)s, %(ldapLoginId)s) RETURNING internal_employee.id]
+[parameters: {'individualId': 0, 'legalOrganizationlId': 0, 'fullnameDeclinationId': 0, 'financialAccountId': 0, 'iin': 'string', 'personnelNumber': 'string', 'lastName': 'string', 'firstName': 'string', 'middleName': 'string', 'birthDate': '2022-05-13', 'workStartDate': '2022-05-13', 'isReserveMember': True, 'isInsider': True, 'isActive': 1, 'gender': 'string', 'statusId': 1, 'gradeId': 1, 'maritalStatusId': 1, 'militaryServiceAttitudeId': 1, 'nationalityGenderId': 312321412, 'ldapLoginId': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-05-13 08:19:52,221:app.api.api_v1.endpoints.internal_employee:WARNING:url=http://localhost/api/v1/internal-employee/421421, 
+2022-05-13 08:20:48,723:app.api.api_v1.endpoints.internal_employee:INFO:url=http://localhost/api/v1/internal-employee/421421, status_code=404
+2022-05-13 08:20:48,724:app.api.api_v1.endpoints.internal_employee:WARNING:url=http://localhost/api/v1/internal-employee/421421, 
+2022-05-13 08:21:29,406:app.api.api_v1.endpoints.internal_employee:INFO:url=http://localhost/api/v1/internal-employee/1, status_code=404
+2022-05-13 08:21:29,406:app.api.api_v1.endpoints.internal_employee:WARNING:url=http://localhost/api/v1/internal-employee/1, 
+2022-05-13 08:21:38,567:app.api.api_v1.endpoints.internal_employee:INFO:url=http://localhost/api/v1/internal-employee/5 , status_code = 200
+2022-05-13 08:22:31,520:app.api.api_v1.endpoints.internal_employee:INFO:url=http://localhost/api/v1/internal-employee/5 , status_code = 200
+2022-05-13 08:22:58,681:app.api.api_v1.endpoints.internal_employee:WARNING:url=http://localhost/api/v1/internal-employee/5, (psycopg2.errors.ForeignKeyViolation) insert or update on table "internal_employee" violates foreign key constraint "internal_employee_militaryServiceAttitudeId_fkey"
+DETAIL:  Key (militaryServiceAttitudeId)=(321412412) is not present in table "military_service_attitude".
+
+[SQL: UPDATE internal_employee SET "militaryServiceAttitudeId"=%(militaryServiceAttitudeId)s WHERE internal_employee.id = %(internal_employee_id)s]
+[parameters: {'militaryServiceAttitudeId': 321412412, 'internal_employee_id': 5}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-05-13 08:23:21,831:app.api.api_v1.endpoints.internal_employee:INFO:url=http://localhost/api/v1/internal-employee/5 , status_code = 200
+2022-05-13 08:23:42,094:app.api.api_v1.endpoints.internal_employee:INFO:PUT url=http://localhost/api/v1/internal-employee/5 , status_code = 200
+2022-05-13 08:30:20,974:app.api.api_v1.endpoints.internal_employee:INFO:PATCH url=http://localhost/api/v1/internal-employee/6, status_code = 404
+2022-05-13 08:30:20,974:app.api.api_v1.endpoints.internal_employee:WARNING:PATCH url=http://localhost/api/v1/internal-employee/6, 
+2022-05-13 08:30:36,217:app.api.api_v1.endpoints.internal_employee:INFO:PATCH url=http://localhost/api/v1/internal-employee/6, status_code = 404
+2022-05-13 08:30:36,218:app.api.api_v1.endpoints.internal_employee:WARNING:PATCH url=http://localhost/api/v1/internal-employee/6, 
+2022-05-13 08:30:40,465:app.api.api_v1.endpoints.internal_employee:INFO:PATCH url=http://localhost/api/v1/internal-employee/5, status_code = 200
+2022-05-13 08:30:54,049:app.api.api_v1.endpoints.internal_employee:INFO:PATCH url=http://localhost/api/v1/internal-employee/6, status_code = 404
+2022-05-13 08:30:54,053:app.api.api_v1.endpoints.internal_employee:WARNING:PATCH url=http://localhost/api/v1/internal-employee/6, 
+2022-05-13 08:31:54,876:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
+2022-05-13 08:32:20,678:app.api.api_v1.endpoints.internal_employee:INFO:GET url=http://localhost/api/v1/internal-employee/?skip=0&limit=100 , status_code = 200
